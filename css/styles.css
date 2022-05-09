@@ -487,6 +487,7 @@ img {
 }
 
 .flex-element {
+  position: relative;
   
   margin-right: 30px;
   margin-bottom: 30px;
@@ -503,6 +504,42 @@ img {
 
 .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.flex-thumb{
+  position: relative;
+  overflow: hidden;
+}
+ 
+.flex-actions {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 60px 24px;
+
+  background-color:rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.thumb-text {
+  
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: var(--title-text-color);
+}
+
+.flex-element:hover .flex-actions {
+  transform: translateY(0);
+
 }
 
 .button {
