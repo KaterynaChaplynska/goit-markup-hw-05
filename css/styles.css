@@ -363,10 +363,43 @@ a {
 }
 
 .picture-list .item {
+  position: relative;
+  display: flex;
+
   margin-right: 30px;
 }
 .picture-list .item:last-child {
   margin-right: 0;
+}
+
+.picture-thumb::before {
+  position: absolute;
+  display:inline-block;
+  bottom: 0;
+  left: 0;
+
+  content: '';
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);;
+
+}
+
+.picture-title {
+  position: absolute;
+  
+  bottom: 0;
+  left: 0;
+  padding: 27px 82px;
+  width: 100%;
+ 
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-text-color);
 }
 
 .section .team {
